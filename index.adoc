@@ -14,3 +14,4 @@ Run `asciidoctor index.adoc` to generate a new `index.html`.
 
 include::research/owaspCheatSheetSeries.adoc[leveloffset=+1]
 include::research/owaspMobileVerificationStandard.adoc[leveloffset=+1]
+include::research/androidSecurityGuide.adoc[leveloffset=+1]
