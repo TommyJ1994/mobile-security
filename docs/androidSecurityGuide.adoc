@@ -68,13 +68,13 @@ This is necessary to to create the User's SID (User Secure Identifier) which is 
 This SID is cryptographically bound to the user's password, so when a successful authentication takes place, the AuthTokens will contain the User SID for that password.
 
 === Authentication Process
-Once a user has set up a credential (eg. a Pattern lock) and they have recieved their User SID (Secure User Id), they are now ready to authenticate.
+Once a user has set up a credential (eg. a Pattern lock) and they have received their User SID (Secure User Id), they are now ready to authenticate.
 
 As part of Android authentication, an operating system (known as Trusty OS) runs on a processor intended to provide a TEE (Trusted Execution Environment).
 
 .Android Authentication Process
 [caption="Figure 1: "]
-image::assets/android-authentication-flow.png[600, 600]
+image::research/assets/android-authentication-flow.png[600, 600]
 
 . Authentication begins when a user enters a Gatekeeper credential (eg. a Pin, Pattern, Password) or a Fingerprint.
 . The next step involves either the Gatekeeper daemon (gatekeeperd) or the Fingerprint daemon (fingerprintd) depending on what authentication credential is used.
