@@ -105,7 +105,7 @@ The Keycloak configuration is saved in the https://github.com/feedhenry/mobile-s
 .Code
 [source,json,linenums,indent=0]
 ....
-include::https://raw.githubusercontent.com/feedhenry/mobile-security-android-template/master/app/src/main/assets/mobile-services.json[]
+include::https://raw.githubusercontent.com/TommyJ1994/mobile-security-android-template/3270aaca4249a18a6c71d43e2e6f0f130f3fb0bb/app/src/main/assets/mobile-services.json[]
 ....
 
 The redirect url of the application is defined in `android.defaultConfig.manifestPlaceholders` of the apps build.gradle[https://github.com/feedhenry/mobile-security-android-template/blob/master/app/build.gradle] file.
@@ -115,16 +115,16 @@ You will also need to define the URL in the https://github.com/feedhenry/mobile-
 .Code
 [source,java,linenums,indent=0]
 ....
-include::https://raw.githubusercontent.com/feedhenry/mobile-security-android-template/master/app/src/main/java/com/feedhenry/securenativeandroidtemplate/di/SecureApplicationModule.java[tags=login]
+include::https://raw.githubusercontent.com/TommyJ1994/mobile-security-android-template/3270aaca4249a18a6c71d43e2e6f0f130f3fb0bb/app/src/main/java/com/feedhenry/securenativeandroidtemplate/di/SecureApplicationModule.java[tags=login]
 ....
 
 ==== Authentication
 We can then perform the auth request and create a new intent which will handle the auth response from the system browser. The authentication phase will occur in a system browser in a safe context outside of the application.
-
+app/src/main/java/com/feedhenry/securenativeandroidtemplate/di/SecureApplicationModule.java
 .Code
 [source,java,linenums,indent=0]
 ....
-include::https://raw.githubusercontent.com/feedhenry/mobile-security-android-template/master/app/src/main/java/com/feedhenry/securenativeandroidtemplate/features/authentication/providers/KeycloakAuthenticateProviderImpl.java[tags=login]
+include::https://raw.githubusercontent.com/TommyJ1994/mobile-security-android-template/3270aaca4249a18a6c71d43e2e6f0f130f3fb0bb/app/src/main/java/com/feedhenry/securenativeandroidtemplate/features/authentication/providers/KeycloakAuthenticateProviderImpl.java[tags=login]
 ....
 
 ==== Handling the Authentication Response
@@ -134,7 +134,7 @@ A check is performed in the MainActivity for incoming intents so the result can 
 .Code
 [source,java,linenums,indent=0]
 ....
-include::https://raw.githubusercontent.com/feedhenry/mobile-security-android-template/master/app/src/main/java/com/feedhenry/securenativeandroidtemplate/MainActivity.java[tags=onActivityResult]
+include::https://raw.githubusercontent.com/TommyJ1994/mobile-security-android-template/3270aaca4249a18a6c71d43e2e6f0f130f3fb0bb/app/src/main/java/com/feedhenry/securenativeandroidtemplate/MainActivity.java[tags=onActivityResult]
 ....
 
 ==== Logout
@@ -144,7 +144,7 @@ To logout of the application, we must make a call to the logout endpoint on the 
 .Code
 [source,java,linenums,indent=0]
 ....
-include::https://raw.githubusercontent.com/feedhenry/mobile-security-android-template/master/app/src/main/java/com/feedhenry/securenativeandroidtemplate/features/authentication/providers/KeycloakAuthenticateProviderImpl.java[tags=logout]
+include::https://raw.githubusercontent.com/TommyJ1994/mobile-security-android-template/3270aaca4249a18a6c71d43e2e6f0f130f3fb0bb/app/src/main/java/com/feedhenry/securenativeandroidtemplate/features/authentication/providers/KeycloakAuthenticateProviderImpl.java[tags=logout]
 ....
 
 === Native iOS
